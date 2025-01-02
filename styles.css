@@ -3,3 +3,34 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: "Roboto", serif, system-ui;
+    font-size: 2rem;
+    color: black;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.side-bar {
+    background-color: #1992d4;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    color: white;
+}
+
+.header {
+    background-color: #ffffff;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.main-content {
+    background-color: #e2e8f0;
+    padding: 10px;
+    grid-column: 2;
+}
