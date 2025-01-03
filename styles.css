@@ -6,9 +6,8 @@
 
 body {
     font-family: "Roboto", serif, system-ui;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
-    padding: 10px;
 }
 
 .container {
@@ -16,11 +15,52 @@ body {
     grid-template-columns: 1fr 5fr;
 }
 
-.side-bar {
+.sidebar {
+    padding: 15px;
     background-color: #1992d4;
-    grid-column: 1;
     grid-row: 1 / -1;
     color: white;
+    display: grid;
+    gap: 35px;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    img, h1 {
+        align-self: center;
+    }
+    h1 {
+        margin-left: 0.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    display: grid;
+    gap: 35px;
+    margin-left: 7px;
+}
+
+.menu a{
+    color: white;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-auto-rows: 40px;
+    img,h2 {
+        align-self: center;
+    }
+    img {
+        margin-top: -2px;
+    }
+    h2 {
+        font-size: 1.1rem;
+        margin-left: 0.7rem;
+    }
 }
 
 .header {
@@ -33,4 +73,5 @@ body {
     background-color: #e2e8f0;
     padding: 10px;
     grid-column: 2;
+    grid-row: -1;
 }
