@@ -13,12 +13,17 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "side header"
+        "side main"
+        "side main";
 }
 
 .sidebar {
     padding: 15px;
     background-color: #1992d4;
-    grid-row: 1 / -1;
+    grid-area: side;
     color: white;
     display: grid;
     gap: 35px;
@@ -29,6 +34,7 @@ body {
     grid-template-columns: 40px 1fr;
     img, h1 {
         align-self: center;
+        margin-top: 5px;
     }
     h1 {
         margin-left: 0.4rem;
@@ -65,13 +71,97 @@ a {
 
 .header {
     background-color: #ffffff;
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+}
+
+.header > .top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin: 10px 20px 15px;
+    img {
+        margin-top: 5px;
+    }
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.user-settings {
+    display: grid;
+    grid-template-columns: 50px 60px 1fr;
+    align-items: center;
+}
+
+.header > .bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin: -10px 20px 10px;
+}
+
+.bottom > .left-side {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+}
+
+.bottom > .right-side {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    align-items: center;
+}
+
+.prof-pic {
+    background-color: #f0b429;
+    border-radius: 50%;
+}
+
+.user-settings > .prof-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.left-side .prof-pic {
+    width: 85px;
+    height: 85px;
+}
+
+input[type=search] {
+    border: none;
+    background-color: #e2e8f0;
+    width: 550px;
+    height: 2rem;
+    padding: 10px;
+    margin-left: 1rem;
+    border-radius: 50px;
+}
+
+button {
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    background-color: #1992d4;
+    border-radius: 50px;
+    border: none;
+    width: 100px;
 }
 
 .main-content {
     background-color: #e2e8f0;
     padding: 10px;
-    grid-column: 2;
-    grid-row: -1;
+    grid-area: main;
 }
